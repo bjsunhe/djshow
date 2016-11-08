@@ -25,6 +25,13 @@
             position: absolute;
             width: 100%;
         }
+        .mask{
+            position: absolute;
+            width:300px;
+            left:50%;
+            margin-left:-150px; 
+            top:200px;            
+        }
         .icon{
             width:50px;
             position: absolute;
@@ -58,10 +65,10 @@
     <img class="icon icon-cd" src="icon-cd.png" alt="">    
     <img class="icon icon-sh" src="icon-sh.png" alt="">    
     <img class="icon icon-xa" src="icon-xa.png" alt="">
-    <img src="xa.png" alt="">    
-    <img src="SH.png" alt="">    
-    <img src="CD.png" alt="">    
-    <img src="bj.png" alt="">    
+    <img class="mask mask-xa" src="xa.png" alt="">    
+    <img class="mask mask-sh" src="SH.png" alt="">    
+    <img class="mask mask-cd" src="CD.png" alt="">    
+    <img class="mask mask-bj" src="bj.png" alt="">    
 </div>
 
 
@@ -72,18 +79,31 @@
 
 <script>
     $(function () {
-        $('#menu-nav .navbar-collapse a').click(function (e) {
-            var href = $(this).attr('href');
-            var tabId = $(this).attr('data-tab');
-            if ('#' !== href) {
-                e.preventDefault();
-                $(document).scrollTop($(href).offset().top-100);
-                if (tabId) {
-                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
-                }
-            }
+        $('.icon-bj').click(function (e) {
+            
+        });
+        $('.icon-cd').click(function (e) {
+            
+        });
+        $('.icon-sh').click(function (e) {
+            
+        });
+        $('.icon-xa').click(function (e) {
+            
         });
 
+        $('.mask-xa').click(function (e) {
+            
+        });                 
+        $('.mask-cd').click(function (e) {
+            
+        });
+        $('.mask-sh').click(function (e) {
+            
+        });
+        $('.mask-xa').click(function (e) {
+            
+        });
 
     });
 </script>
