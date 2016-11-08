@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数据新闻工作坊</title>
+
+    <style>
+
+        body {            
+            background: #d1e5ec;
+            margin:0;
+        }
+        .range{
+            width: 100%;
+        }
+        .container{
+            position: relative;
+            width: 1000px;
+            left:50%;
+            margin-left:-500px;            
+        }
+        .map{
+            position: absolute;
+            width: 100%;
+        }
+        .icon{
+            width:50px;
+            position: absolute;
+        }
+        .icon-bj{
+            right: 260px;
+            top: 430px;
+        }
+        .icon-cd{
+            right: 460px;
+            top: 630px;
+        }
+        .icon-sh{
+            right: 150px;
+            top: 580px;
+        }
+        .icon-xa{
+            right: 370px;
+            top: 530px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<img class="range" src="rang.png" alt="">
+<div class="container">
+    <img class="map" src="ditu.png" alt="">
+    <img class="icon icon-bj" src="icon-bj.png" alt="">    
+    <img class="icon icon-cd" src="icon-cd.png" alt="">    
+    <img class="icon icon-sh" src="icon-sh.png" alt="">    
+    <img class="icon icon-xa" src="icon-xa.png" alt="">
+    <img src="xa.png" alt="">    
+    <img src="SH.png" alt="">    
+    <img src="CD.png" alt="">    
+    <img src="bj.png" alt="">    
+</div>
+
+
+
+
+
+<script src="jquery.js"></script>
+
+<script>
+    $(function () {
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top-100);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+
+
+    });
+</script>
+</body>
+</html>
