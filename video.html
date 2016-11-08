@@ -405,7 +405,9 @@
 </script>
 <script>
     $(document).ready(function () {
-        $(document.body).vide("map.mp4"); // Non declarative initialization
+        $(document.body).vide({mp4:"map.mp4"},{
+            muted: false
+        }); // Non declarative initialization
 
        // var instance = $(document.body).data("vide"); // Get instance
 //        var video = instance.getVideoObject(); // Get video object
@@ -413,11 +415,11 @@
     });
 </script>
 </head>
-<body data-vide-bg="map.mp4" data-vide-options="muted: true">
+<body data-vide-bg="map.mp4">
 <div class="center-block">
                 <h1>从你的全中国路过</h1>
                 <br>
-                <h2>房价地图</h2>
+                <h2>世界越来越平，距离越来越近，寻找你的城市，评说你的城市！</h2>
                 <br><br>
                 <p>
                     <a class="button red" href="index.html">查看</a>
